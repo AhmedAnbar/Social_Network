@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 26, 2016 at 01:23 PM
+-- Generation Time: Mar 26, 2016 at 01:29 PM
 -- Server version: 5.5.47-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.14
 
@@ -36,14 +36,6 @@ CREATE TABLE IF NOT EXISTS `comments` (
   PRIMARY KEY (`comment_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
---
--- Dumping data for table `comments`
---
-
-INSERT INTO `comments` (`comment_id`, `post_id`, `comment_author`, `user_id`, `comment_content`, `date`) VALUES
-(1, 3, 'Guestuser', 2, 'ghgkdfgdfkgf', '2016-03-26 13:22:56'),
-(2, 3, 'Guestuser', 2, 'jhgd', '2016-03-26 13:23:08');
-
 -- --------------------------------------------------------
 
 --
@@ -58,15 +50,6 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`post_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `posts`
---
-
-INSERT INTO `posts` (`post_id`, `post_content`, `post_title`, `post_date`, `user_id`) VALUES
-(1, 'Hello ...Hello ...Hello ...Hello ...Hello ...Hello ...Hello ...', 'Hello', '2016-03-25 22:53:30', 2),
-(2, 'Hello ...Hello ...Hello ...Hello ...Hello ...Hello ...Hello ...Hello ...Hello ...Hello ...Hello ...Hello ...Hello ...Hello ...Hello ...Hello ...Hello ...', 'Hello', '2016-03-25 22:53:44', 2),
-(3, '.', '.', '2016-03-26 01:04:45', 2);
 
 -- --------------------------------------------------------
 
@@ -109,13 +92,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   `posts` int(11) NOT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`user_id`, `user_name`, `user_pass`, `user_email`, `user_country`, `user_gender`, `user_b_date`, `user_image`, `register_date`, `last_login`, `status`, `posts`) VALUES
-(2, 'Guestuser', 'guestpass', 'guest@webfreelancer.com', 'Egypt', 'Male', '0000-00-00', 'CYMERA_20141008_164453.jpg', '2016-03-25 22:51:42', '2016-03-25 23:04:25', 0, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
