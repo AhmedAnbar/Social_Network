@@ -11,7 +11,7 @@ if(!isset($_SESSION['user_email'])){
 	<head>
 		<link rel="stylesheet" href="../css/main_style.css" />
 		<link rel="stylesheet" href="../css/animate.css" />
-		<title>Coment on <?php echo $_SESSION['user_name']; ?> post</title>
+		<title>Members Page</title>
 	</head>
 <body>
 	<header>
@@ -19,7 +19,7 @@ if(!isset($_SESSION['user_email'])){
 	<div id="home_links">
 		<a href="../logout.php" class="action-button shadow animatebutton blue animated tada">LogOut</a>
 		<a href="edit_user.php" class="action-button shadow animatebutton blue">Edit Profile</a>
-		<a href="#" class="action-button shadow animatebutton blue">My Posts(<?php CountPosts(); ?>)</a>
+		<a href="my_posts.php" class="action-button shadow animatebutton blue">My Posts(<?php CountPosts(); ?>)</a>
 	</div>
         </header>
 	<div id="warrper">

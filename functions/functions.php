@@ -237,7 +237,6 @@ function GetSinglePost() {
 	if (isset($_GET['post_id'])) {
 		
 		$get_id = $_GET['post_id'];
-		
 		$get_posts = "select * from posts WHERE post_id = $get_id";
 	
 		$run_posts = mysqli_query($db_connect, $get_posts);
@@ -335,13 +334,14 @@ function GetSinglePost() {
 				<form action='' method='post' id='insert_comment'>
 					<textarea type='text' name='comment_content' required='required' style='padding: 10px;' class='btn' placeholder='Type your comment'></textarea><br />
 					<button class='btn animated tada' style='margin-top: 5px;' name='insert_comment'>Post a comment</button>
-				</form>				
+				</form>		
+                
 			<!--
 				form to insert comment starts
 			-->
 			
 			";
-			
+			echo $_SESSION['user_id'];
 			if (isset($_POST['insert_comment'])) {
 				$comment = htmlspecialchars($_POST['comment_content']);
 				$user_in_com = $_SESSION['user_id'];
