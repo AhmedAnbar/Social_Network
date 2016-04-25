@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include $_SERVER['DOCUMENT_ROOT'] . '/social_network/includes/connection.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/Social_Network/includes/connection.php';
 
 // get topic as option for select element
 function getTopicsAsOption() {
@@ -26,6 +26,7 @@ function getTopicsAsOption() {
 function SignUp(){
 	global $db_connect;
 	
+    
 	if (isset($_POST['sign_up'])) {
 	$name = htmlspecialchars($_POST['u_name']);
 	$password = htmlspecialchars($_POST['u_pass']);
@@ -72,6 +73,9 @@ function SignUp(){
 		$_SESSION['user_name'] = $name;
 		header('Location: home.php');
 	}
+    if (!$run_insert) {
+        echo "<h1>Not inserted.</h1>";
+    }
 }
 }
 
@@ -648,14 +652,3 @@ function Members() {
 
 
 ?>
-
-
-
-
-
-
-
-
-
-
-

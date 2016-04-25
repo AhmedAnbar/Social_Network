@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . "/social_network/functions/functions.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/Social_Network/functions/functions.php";
 
 if(!isset($_SESSION['user_email'])){
 	

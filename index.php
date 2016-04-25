@@ -1,7 +1,6 @@
 <?php 
-session_start();
 
-include $_SERVER['DOCUMENT_ROOT'] . "/social_network/functions/functions.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/Social_Network/functions/functions.php";
 if(isset($_SESSION['user_email'])){
 	
 	header("location: home.php"); 
@@ -52,7 +51,7 @@ if(isset($_SESSION['user_email'])){
 			<td><lable for="country" />Country:</td>
 			<td>
 				<select name="u_country" class="btn" required="required">
-					<option>Select a Country</option>
+					<option></option>
 					<option>Egypt</option>
 					<option>Italy</option>
 				</select>

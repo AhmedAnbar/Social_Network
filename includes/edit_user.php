@@ -1,9 +1,9 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . "/social_network/functions/functions.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/Social_Network/functions/functions.php";
 
 if(!isset($_SESSION['user_email'])){
 	
-	header("location: " . $_SERVER['DOCUMENT_ROOT'] . "/social_network/index.php"); 
+	header("location: " . $_SERVER['DOCUMENT_ROOT'] . "/Social_Network/index.php"); 
 }
  ?>
     <!DOCTYPE html>
